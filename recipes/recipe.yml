@@ -19,8 +19,10 @@ modules:
 
   - type: dnf
     repos:
-      - copr: yalter/niri
-      - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+      copr:
+        - yalter/niri
+      files: 
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
     install:
       packages:
         - niri
