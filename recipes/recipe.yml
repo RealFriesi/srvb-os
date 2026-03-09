@@ -3,10 +3,10 @@
 # image will be published to ghcr.io/<user>/<name>
 name: srvb-os
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: Personal OS image from bazzite with niri and noctalia shell.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite
+base-image: ghcr.io/ublue-os/bazzite-gnome-nvidia
 image-version: 43 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -27,8 +27,12 @@ modules:
       packages:
         - niri
         - noctalia-shell
+        - noctalia-qs
+        - brightnessctl
+        - git
         - cliphist
         - cava
+        - wlsunset
         - xdg-desktop-portal
         - evolution-data-server
     remove:
