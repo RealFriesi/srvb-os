@@ -19,12 +19,17 @@ modules:
 
   - type: dnf
     repos:
-      copr:
-        - atim/starship
+      - copr: yalter/niri
+      - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
     install:
       packages:
-        - micro
-        - starship
+        - niri
+        - noctalia-shell
+        - cliphist
+        - cava
+        - xdg-desktop-portal
+        - evolution-data-server
+        - nano
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
